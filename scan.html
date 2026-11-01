@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-MY">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Scan Food · FreshSave</title><link rel="stylesheet" href="./css/style.css"></head>
+<body>
+<div id="app-shell">
+  <details class="site-sidebar" open><summary class="sidebar-toggle" aria-label="Toggle navigation"><span class="sidebar-menu-icon" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html"><span class="brand-mark">F</span><span>FreshSave<small>Waste less. Share more.</small></span></a><a href="./index.html">Dashboard</a><a href="./inventory.html">My Inventory</a><a href="./scan.html" aria-current="page">Scan Food</a><a href="./marketplace.html">Food Rescue</a><a href="./listings.html">My Listings</a><a href="./reservations.html">Reservations</a><a href="./impact.html">Impact</a><a href="./notifications.html">Notifications</a><a href="./profile.html">Profile</a></nav></details>
+  <main class="main"><div class="page">
+    <div class="page-title-row"><div><p class="eyebrow">Food management</p><h1>Scan Food</h1><p>Photograph a product and confirm its expiry date before adding it.</p></div></div>
+    <section class="scan-primary">
+      <div class="camera-panel"><div class="camera-frame"><span class="camera-frame-label">Align product and expiry label</span></div><div class="camera-copy"><span aria-hidden="true">◎</span><h2>Scan with a product photo</h2><p>Capture the package and expiry date label in clear, even light.</p><div class="scan-actions"><label class="button camera-capture" for="camera-file">Take a product photo</label><label class="button button-soft camera-capture" for="upload-file">Upload an image</label></div><input id="camera-file" class="visually-hidden" type="file" accept="image/*" capture="environment"><input id="upload-file" class="visually-hidden" type="file" accept="image/*"></div></div>
+      <aside class="scan-side"><div class="info-note"><b aria-hidden="true">i</b><div><strong>Capture the expiry label</strong><span>Keep the date sharp, evenly lit and fully visible.</span></div></div><section class="barcode-panel"><div class="barcode-heading"><span aria-hidden="true">▥</span><div><h2>Barcode lookup</h2><p>Optional product information helper</p></div></div><label class="form-field" for="barcode-number">EAN-13 barcode<input id="barcode-number" name="barcode" inputmode="numeric" autocomplete="off" value="9556001234567"></label><p class="barcode-hint">Scan or enter the 13-digit number on the package.</p></section></aside>
+    </section>
+
+    <section class="workflow-panel" aria-labelledby="ocr-heading">
+      <div class="section-heading"><div><h2 id="ocr-heading">Photo scan result</h2><p>Review the detected details, then confirm the expiry date.</p></div><span class="status fresh">Photo scan</span></div>
+      <div class="workflow-content">
+        <div class="state-picker" role="group" aria-label="Photo scan result states">
+          <input class="visually-hidden" type="radio" name="ocr-state" id="ocr-success" checked><label for="ocr-success">Successful detection</label>
+          <input class="visually-hidden" type="radio" name="ocr-state" id="ocr-uncertain"><label for="ocr-uncertain">Uncertain date</label>
+          <input class="visually-hidden" type="radio" name="ocr-state" id="ocr-failed"><label for="ocr-failed">Detection failed</label>
+        </div>
+        <div class="state-panels">
+          <article class="workflow-state ocr-success">
+            <div class="scan-result"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&amp;fit=crop&amp;w=240&amp;q=80" alt="Dutch Lady full cream milk carton"><div><span class="eyebrow">Detected product</span><h3>Dutch Lady Full Cream Milk</h3><p>Dairy · 1 carton · OCR confidence <strong>96%</strong></p><span class="confidence-track"><i></i></span></div></div>
+            <div class="confirm-date"><h3>Please confirm the expiry date.</h3><p>Detected date: <strong>30 November 2026</strong></p><label class="form-field" for="detected-expiry">Expiry date<input id="detected-expiry" name="expiry" type="date" value="2026-11-30"></label><input class="visually-hidden" type="checkbox" id="confirm-success-date"><label class="button" for="confirm-success-date">Confirm Date</label><span class="confirmed-message" role="status">Date confirmed. Product details are ready to add.</span><button class="button save-confirmed" type="button">Add confirmed product to inventory</button></div>
+          </article>
+          <article class="workflow-state ocr-uncertain">
+            <div class="state-alert"><span class="status expiring-soon">Needs review</span><h3>We could not confidently identify the expiry date.</h3><p>The label may be unclear. Check the package and enter the correct date before saving.</p></div>
+            <div class="confirm-date"><h3>Please confirm the expiry date.</h3><p>Detected date: <strong>Possibly 30 November 2026</strong></p><label class="form-field" for="uncertain-expiry">Expiry date<input id="uncertain-expiry" name="uncertainExpiry" type="date" value="2026-11-30"></label><input class="visually-hidden" type="checkbox" id="confirm-uncertain-date"><label class="button" for="confirm-uncertain-date">Confirm Date</label><span class="confirmed-message" role="status">Date confirmed. Product details are ready to add.</span><button class="button save-confirmed" type="button">Add confirmed product to inventory</button></div>
+          </article>
+          <article class="workflow-state ocr-failed">
+            <div class="state-alert"><span class="status urgent">Manual entry required</span><h3>We could not read the expiry date.</h3><p>Please check the product packaging and enter the date manually.</p></div>
+            <div class="confirm-date"><h3>Please confirm the expiry date.</h3><p>No date detected.</p><label class="form-field" for="manual-expiry">Expiry date<input id="manual-expiry" name="manualExpiry" type="date"></label><input class="visually-hidden" type="checkbox" id="confirm-manual-date"><label class="button" for="confirm-manual-date">Confirm Date</label><span class="confirmed-message" role="status">Date confirmed. Product details are ready to add.</span><button class="button save-confirmed" type="button">Add confirmed product to inventory</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-panel barcode-workflow" aria-labelledby="barcode-result-heading">
+      <div class="section-heading"><div><h2 id="barcode-result-heading">Barcode product information</h2><p>Lookup is a secondary way to identify a product.</p></div><span class="status expiring-soon">EAN-13 · 9556001234567</span></div>
+      <div class="workflow-content">
+        <div class="state-picker" role="group" aria-label="Barcode lookup result states">
+          <input class="visually-hidden" type="radio" name="barcode-state" id="barcode-found" checked><label for="barcode-found">Product found</label>
+          <input class="visually-hidden" type="radio" name="barcode-state" id="barcode-missing"><label for="barcode-missing">Not found</label>
+          <input class="visually-hidden" type="radio" name="barcode-state" id="barcode-local"><label for="barcode-local">Registered locally</label>
+        </div>
+        <div class="state-panels">
+          <article class="workflow-state barcode-found"><div class="scan-result"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&amp;fit=crop&amp;w=240&amp;q=80" alt="Dutch Lady milk carton"><div><span class="eyebrow">Catalogue match</span><h3>Dutch Lady Full Cream Milk</h3><p>Category: Dairy · Barcode: 9556001234567</p><input class="visually-hidden" type="checkbox" id="confirm-found-product"><label class="button button-small" for="confirm-found-product">Confirm Product</label><span class="barcode-confirmed" role="status">Product confirmed. Review the expiry date before adding it.</span></div></div></article>
+          <article class="workflow-state barcode-missing"><div class="state-alert"><h3>Product not found in our catalogue.</h3><p>Scanned barcode: <strong>9556001234567</strong></p></div><div class="form-grid lookup-fields"><div class="form-field"><label for="unknown-product">Product name</label><input id="unknown-product" name="unknownProduct" placeholder="Milo Activ-Go 3-in-1"></div><div class="form-field"><label for="unknown-category">Category</label><select id="unknown-category" name="unknownCategory"><option>Dairy</option><option>Bakery</option><option>Beverages</option><option>Vegetables</option><option>Other</option></select></div></div><input class="visually-hidden" type="checkbox" id="save-unknown-product"><label class="button" for="save-unknown-product">Save Product Information</label><span class="barcode-confirmed" role="status">Product information saved for this barcode.</span><p class="inline-note">Once registered, this product can be recognised by other FreshSave users.</p></article>
+          <article class="workflow-state barcode-local"><div class="scan-result"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=240&amp;q=80" alt="Gardenia bread loaf"><div><span class="eyebrow">Registered FreshSave product</span><h3>Gardenia Original Classic</h3><p>Category: Bakery · Barcode: 9556007654321</p><span class="status fresh">Product details recognised</span></div></div><p class="inline-note">Once registered, this product can be recognised by other FreshSave users.</p><input class="visually-hidden" type="checkbox" id="confirm-local-product"><label class="button button-small" for="confirm-local-product">Confirm Product</label><span class="barcode-confirmed" role="status">Saved Gardenia details confirmed.</span></article>
+        </div>
+      </div>
+    </section>
+
+    <form class="form-panel scan-entry" id="manual-entry">
+      <div class="section-heading"><div><h2>Enter food details</h2><p>Add product information and confirm its expiry date before saving.</p></div></div>
+      <div class="form-grid"><div class="form-field"><label for="scan-name">Product name</label><input id="scan-name" name="name" required placeholder="Fresh blueberries"></div><div class="form-field"><label for="scan-expiry">Expiry date</label><input id="scan-expiry" name="expiry" required type="date"></div><div class="form-field"><label for="scan-category">Category</label><select id="scan-category" name="category"><option>Fruit</option><option>Vegetables</option><option>Dairy</option><option>Bakery</option></select></div><div class="form-field"><label for="scan-quantity">Quantity</label><input id="scan-quantity" name="quantity" placeholder="1 punnet"></div></div>
+      <div class="form-actions"><label class="confirm-inline"><input class="manual-date-confirmation" type="checkbox" id="manual-date-confirmed" name="manualDateConfirmed"> I confirm the expiry date is correct</label><span class="manual-confirmed-message" role="status">Expiry date confirmed.</span><input class="visually-hidden" type="checkbox" id="manual-item-ready"><label class="button manual-save-button" for="manual-item-ready">Add to inventory</label><span class="manual-item-message" role="status">Inventory entry preview complete.</span></div>
+    </form>
+  </div></main>
+</div>
+</body></html>

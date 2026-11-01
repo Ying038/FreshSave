@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-MY">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FreshSave food expiry tracker and rescue marketplace">
+  <title>Dashboard · FreshSave</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="app-shell">
+    <details class="site-sidebar" open>
+      <summary class="sidebar-toggle" aria-label="Toggle navigation"><span class="sidebar-menu-icon" aria-hidden="true">☰</span><span>Menu</span></summary>
+      <nav class="site-nav" aria-label="Main navigation">
+      <a class="brand" href="./index.html"><span class="brand-mark">F</span><span>FreshSave<small>Waste less. Share more.</small></span></a>
+      <a href="./index.html" aria-current="page">Dashboard</a>
+      <a href="./inventory.html">My Inventory</a>
+      <a href="./scan.html">Scan Food</a>
+      <a href="./marketplace.html">Food Rescue</a>
+      <a href="./listings.html">My Listings</a>
+      <a href="./reservations.html">Reservations</a>
+      <a href="./impact.html">Impact</a>
+      <a href="./notifications.html">Notifications</a>
+      <a href="./profile.html">Profile</a>
+      </nav>
+    </details>
+    <main class="main">
+      <div class="page dashboard-page">
+        <section class="welcome-row">
+          <div><p class="eyebrow">Sunday, 1 November 2026</p><h1>Hello, Amelia</h1><p>Here’s what needs your attention today.</p></div>
+          <div class="quick-buttons">
+            <a class="button button-soft" href="./inventory.html">+ View inventory</a>
+            <a class="button" href="./scan.html">Scan food</a>
+          </div>
+        </section>
+
+        <section class="stats-grid" id="dashboard-stats">
+          <article class="stat-card"><span class="stat-dot blue"></span><div><p>Total inventory</p><strong>6</strong><small>6 categories</small></div></article>
+          <article class="stat-card"><span class="stat-dot yellow"></span><div><p>Expiring soon</p><strong>4</strong><small>Needs attention</small></div></article>
+          <article class="stat-card"><span class="stat-dot red"></span><div><p>Expired items</p><strong>1</strong><small>Review today</small></div></article>
+          <article class="stat-card"><span class="stat-dot green"></span><div><p>Active listings</p><strong>4</strong><small>2 reserved</small></div></article>
+          <article class="stat-card"><span class="stat-dot blue"></span><div><p>Pending reservations</p><strong>2</strong><small>Awaiting response</small></div></article>
+          <article class="stat-card"><span class="stat-dot green"></span><div><p>Food rescued</p><strong>18.4 kg</strong><small>+3.2 kg this month</small></div></article>
+        </section>
+
+        <div class="dashboard-grid">
+          <section class="section-panel span-2">
+            <div class="section-heading"><div><h2>Upcoming expiry</h2><p>Prioritised by remaining shelf life</p></div><a href="./inventory.html">View inventory →</a></div>
+            <div class="compact-table" id="expiry-preview">
+              <a class="compact-row" href="./product.html"><img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><div><strong>Baby Spinach</strong><span>Vegetables · 1 bag</span></div><span>2 Nov 2026</span><span class="status urgent">Urgent</span><b>1 day</b></a>
+              <a class="compact-row" href="./product.html"><img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><div><strong>Organic Strawberries</strong><span>Fruit · 1 punnet</span></div><span>3 Nov 2026</span><span class="status urgent">Urgent</span><b>2 days</b></a>
+              <a class="compact-row" href="./product.html"><img src="https://images.unsplash.com/photo-1571212515416-fef01fc43637?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><div><strong>Greek Yogurt</strong><span>Dairy · 2 tubs</span></div><span>6 Nov 2026</span><span class="status expiring-soon">Expiring Soon</span><b>5 days</b></a>
+              <a class="compact-row" href="./product.html"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><div><strong>Sourdough Loaf</strong><span>Bakery · 1 loaf</span></div><span>7 Nov 2026</span><span class="status expiring-soon">Expiring Soon</span><b>6 days</b></a>
+            </div>
+          </section>
+          <aside class="section-panel impact-summary">
+            <div class="section-heading"><div><h2>Your impact</h2><p>This month</p></div></div>
+            <div class="impact-hero"><strong>18.4 kg</strong><span>food saved from waste</span></div>
+            <div class="impact-progress"><i></i></div>
+            <p>72% of your monthly rescue goal</p>
+            <div class="mini-stats"><div><strong>RM 86</strong><span>saved</span></div><div><strong>46 kg</strong><span>CO₂ avoided</span></div></div>
+            <a class="text-link" href="./impact.html">Open impact dashboard →</a>
+          </aside>
+        </div>
+
+        <div class="dashboard-grid lower-grid">
+          <section class="section-panel">
+            <div class="section-heading"><div><h2>Quick links</h2><p>Keep your food moving</p></div></div>
+            <div class="action-list">
+              <a href="./inventory.html"><span class="icon-box blue">▣</span><div><strong>View inventory</strong><small>Check food and expiry dates</small></div><b>→</b></a>
+              <a href="./marketplace.html"><span class="icon-box green">♧</span><div><strong>Browse food rescue</strong><small>Find discounted food nearby</small></div><b>→</b></a>
+              <a href="./create-listing.html"><span class="icon-box yellow">◇</span><div><strong>Share surplus food</strong><small>See the listing form</small></div><b>→</b></a>
+            </div>
+          </section>
+          <section class="section-panel span-2">
+            <div class="section-heading"><div><h2>Food rescue near you</h2><p>Deals available today</p></div><a href="./marketplace.html">Browse all →</a></div>
+            <div class="rescue-preview" id="rescue-preview">
+              <a class="preview-card" href="./rescue-item.html"><img src="https://images.unsplash.com/photo-1669909910353-7bcf47c2139d?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt=""><div><span>Vegetables</span><strong>Seasonal Vegetable Box</strong><small>Green Corner Grocer · 0.8 km</small><p><b>RM 4.50</b><s>RM 12.00</s></p></div></a>
+              <a class="preview-card" href="./rescue-item.html"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt=""><div><span>Bakery</span><strong>Artisan Bread Bundle</strong><small>Baker &amp; Bloom · 1.2 km</small><p><b>RM 3.00</b><s>RM 9.00</s></p></div></a>
+              <a class="preview-card" href="./rescue-item.html"><img src="https://images.unsplash.com/photo-1714386893630-b7a148f77efd?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt=""><div><span>Fruit</span><strong>Organic Fruit Basket</strong><small>Maya’s Pantry · 1.8 km</small><p><b>Free</b><s>RM 14.00</s></p></div></a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

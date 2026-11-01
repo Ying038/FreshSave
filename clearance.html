@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-MY">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Clearance Basket · FreshSave</title><link rel="stylesheet" href="./css/style.css"></head>
+<body>
+<div id="app-shell">
+  <details class="site-sidebar" open><summary class="sidebar-toggle" aria-label="Toggle navigation"><span class="sidebar-menu-icon" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html"><span class="brand-mark">F</span><span>FreshSave<small>Waste less. Share more.</small></span></a><a href="./index.html">Dashboard</a><a href="./inventory.html">My Inventory</a><a href="./scan.html">Scan Food</a><a href="./marketplace.html">Food Rescue</a><a href="./listings.html" aria-current="page">My Listings</a><a href="./reservations.html">Reservations</a><a href="./impact.html">Impact</a><a href="./notifications.html">Notifications</a><a href="./profile.html">Profile</a></nav></details>
+  <main class="main"><div class="page">
+    <div class="page-title-row"><div><p class="eyebrow">Seller centre · Listing handoff</p><h1>FreshSave Clearance Basket</h1><p>Keep listed items separate from your regular shelf stock.</p></div><a class="button button-soft" href="./listings.html">← Back to listings</a></div>
+    <section class="clearance-confirmation workflow-panel">
+      <div class="clearance-instruction"><span class="clearance-check" aria-hidden="true">✓</span><div><span class="eyebrow">Listing ready</span><h2>Move these items to your FreshSave Clearance Basket.</h2><p>Separate the listed stock near the cashier counter so it is easy to find at pickup.</p></div></div>
+      <div class="clearance-item"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&amp;fit=crop&amp;w=260&amp;q=80" alt="Dutch Lady Full Cream Milk carton"><div><h3>Dutch Lady Full Cream Milk</h3><p>Batch DL-301126 · Dairy</p><div class="clearance-facts"><span><small>Listed quantity</small><strong>4 cartons</strong></span><span><small>Expiry date</small><strong>30 November 2026</strong></span><span><small>Rescue price</small><strong>RM 4.20</strong></span></div></div></div>
+      <div class="basket-illustration" role="img" aria-label="Designated FreshSave basket beside a cashier counter"><div class="counter"><span>Cashier counter</span><i></i></div><div class="basket"><span class="basket-product milk-carton"></span><span class="basket-product bread-loaf"></span><span class="basket-product veg-box"></span><b>FreshSave<br>Clearance Basket</b></div></div>
+    </section>
+    <section class="workflow-panel clearance-listings">
+      <div class="section-heading"><div><h2>Active listing clearance status</h2><p>Update the physical handling stage when stock moves.</p></div></div>
+      <div class="clearance-status-list">
+        <article class="clearance-listing">
+          <div class="clearance-product"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><div><strong>Dutch Lady Milk</strong><small>4 cartons · Batch DL-301126</small></div></div>
+          <div class="clearance-control">
+            <input class="visually-hidden" type="radio" name="milk-clearance" id="milk-awaiting" checked><input class="visually-hidden" type="radio" name="milk-clearance" id="milk-basket"><input class="visually-hidden" type="radio" name="milk-clearance" id="milk-reserved"><input class="visually-hidden" type="radio" name="milk-clearance" id="milk-collected">
+            <div class="clearance-current"><span class="clearance-awaiting">Awaiting Physical Transfer</span><span class="clearance-inbasket">In Clearance Basket</span><span class="clearance-reserved">Reserved</span><span class="clearance-collected">Collected</span></div>
+            <div class="clearance-actions"><label class="button button-small" for="milk-basket">Confirm Moved to Clearance Basket</label><label class="status-action" for="milk-reserved">Reserved</label><label class="status-action" for="milk-collected">Collected</label><label class="status-action" for="milk-awaiting">Reset status</label></div>
+          </div>
+        </article>
+        <article class="clearance-listing">
+          <div class="clearance-product"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><div><strong>Gardenia Bread</strong><small>6 loaves · Batch GB-021126</small></div></div>
+          <div class="clearance-control">
+            <input class="visually-hidden" type="radio" name="bread-clearance" id="bread-awaiting" checked><input class="visually-hidden" type="radio" name="bread-clearance" id="bread-basket"><input class="visually-hidden" type="radio" name="bread-clearance" id="bread-reserved"><input class="visually-hidden" type="radio" name="bread-clearance" id="bread-collected">
+            <div class="clearance-current"><span class="clearance-awaiting">Awaiting Physical Transfer</span><span class="clearance-inbasket">In Clearance Basket</span><span class="clearance-reserved">Reserved</span><span class="clearance-collected">Collected</span></div>
+            <div class="clearance-actions"><label class="button button-small" for="bread-basket">Confirm Moved to Clearance Basket</label><label class="status-action" for="bread-reserved">Reserved</label><label class="status-action" for="bread-collected">Collected</label><label class="status-action" for="bread-awaiting">Reset status</label></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div></main>
+</div>
+</body></html>

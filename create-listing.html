@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-MY">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Create Listing · FreshSave</title><link rel="stylesheet" href="./css/style.css"></head>
+<body>
+<div id="app-shell">
+  <details class="site-sidebar" open><summary class="sidebar-toggle" aria-label="Toggle navigation"><span class="sidebar-menu-icon" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html"><span class="brand-mark">F</span><span>FreshSave<small>Waste less. Share more.</small></span></a><a href="./index.html">Dashboard</a><a href="./inventory.html">My Inventory</a><a href="./scan.html">Scan Food</a><a href="./marketplace.html">Food Rescue</a><a href="./listings.html" aria-current="page">My Listings</a><a href="./reservations.html">Reservations</a><a href="./impact.html">Impact</a><a href="./notifications.html">Notifications</a><a href="./profile.html">Profile</a></nav></details>
+  <main class="main"><div class="page">
+    <div class="page-title-row"><div><p class="eyebrow">Seller centre</p><h1>Create Food Listing</h1><p>Share safe surplus food with people in your community.</p></div><a class="button button-soft" href="./listings.html">Back to listings</a></div>
+    <form class="form-panel">
+      <div class="form-grid">
+        <div class="form-field full"><label for="listing-image">Product image</label><label class="upload-drop"><input id="listing-image" class="visually-hidden" name="image" type="file" accept="image/*"><span><strong>Upload product photos</strong><small>JPG or PNG</small></span></label></div>
+        <div class="form-field"><label for="listing-name">Product name</label><input id="listing-name" name="name" required placeholder="Seasonal vegetable box"></div>
+        <div class="form-field"><label for="listing-category">Category</label><select id="listing-category" name="category"><option>Vegetables</option><option>Fruit</option><option>Bakery</option><option>Dairy</option></select></div>
+        <div class="form-field full"><label for="listing-description">Description</label><textarea id="listing-description" name="description" required placeholder="Describe the food and its condition"></textarea></div>
+        <div class="form-field"><label for="listing-quantity">Available quantity</label><input id="listing-quantity" name="quantity" required type="number" min="1" value="2"></div>
+        <div class="form-field"><label for="listing-expiry">Expiry date</label><input id="listing-expiry" name="expiry" required type="date" value="2026-11-30"></div>
+        <div class="form-field"><label for="original-price">Original price (RM)</label><input id="original-price" name="originalPrice" required type="number" min="0" step=".01" value="12"></div>
+        <div class="form-field"><label for="rescue-price">Rescue price (RM)</label><input id="rescue-price" name="rescuePrice" required type="number" min="0" step=".01" value="4.50"></div>
+        <div class="form-field"><label for="pickup-location">Pickup location</label><input id="pickup-location" name="pickupLocation" required value="Kuala Lumpur, Malaysia 50450"></div>
+        <div class="form-field"><label for="pickup-time">Pickup window</label><input id="pickup-time" name="pickupTime" required value="Today, 5:30–7:00 PM"></div>
+        <div class="form-field full"><label for="pickup-notes">Pickup instructions</label><textarea id="pickup-notes" name="pickupNotes" placeholder="Meet at the front desk"></textarea></div>
+      </div>
+      <div class="form-actions"><a class="button button-soft" href="./listings.html">Cancel</a><a class="button button-soft" href="./clearance.html">Preview clearance handoff</a><input class="visually-hidden" type="checkbox" id="listing-published-preview"><label class="button" id="publish-listing" for="listing-published-preview">Publish listing</label><span class="listing-published-message" role="status">Listing preview ready. Move the listed items to the clearance basket.</span><a class="button button-green listing-clearance-link" href="./clearance.html">Continue to clearance handoff</a></div>
+    </form>
+  </div></main>
+</div>
+</body></html>

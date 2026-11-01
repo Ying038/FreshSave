@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-MY">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My Listings · FreshSave</title><link rel="stylesheet" href="./css/style.css"></head>
+<body>
+<div id="app-shell">
+  <details class="site-sidebar" open><summary class="sidebar-toggle" aria-label="Toggle navigation"><span class="sidebar-menu-icon" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html"><span class="brand-mark">F</span><span>FreshSave<small>Waste less. Share more.</small></span></a><a href="./index.html">Dashboard</a><a href="./inventory.html">My Inventory</a><a href="./scan.html">Scan Food</a><a href="./marketplace.html">Food Rescue</a><a href="./listings.html" aria-current="page">My Listings</a><a href="./reservations.html">Reservations</a><a href="./impact.html">Impact</a><a href="./notifications.html">Notifications</a><a href="./profile.html">Profile</a></nav></details>
+  <main class="main"><div class="page">
+    <div class="page-title-row"><div><p class="eyebrow">Seller centre</p><h1>My Listings</h1><p>Manage active rescue offers and retailer clearance stock.</p></div><div class="heading-actions"><a class="button button-soft" href="./clearance.html">Clearance basket</a><a class="button" href="./create-listing.html">+ View listing form</a></div></div>
+    <section class="stats-grid">
+      <article class="stat-card"><span class="stat-dot green"></span><div><p>Active listings</p><strong>4</strong><small>2 expiring this week</small></div></article>
+      <article class="stat-card"><span class="stat-dot yellow"></span><div><p>Reservations</p><strong>7</strong><small>2 awaiting response</small></div></article>
+      <article class="stat-card"><span class="stat-dot blue"></span><div><p>Completed</p><strong>18</strong><small>This quarter</small></div></article>
+    </section>
+    <div class="tabs"><button class="active" type="button">Active</button><button type="button">Pending</button><button type="button">Completed</button><button type="button">Unavailable</button></div>
+    <div class="toolbar"><span class="toolbar-meta">4 active listings</span></div>
+    <div class="table-wrap"><table class="data-table"><thead><tr><th>Product</th><th>Rescue price</th><th>Available</th><th>Expiry</th><th>Status</th><th>Reservations</th><th>Details</th></tr></thead><tbody>
+      <tr><td><a class="product-cell" href="./rescue-item.html"><img src="https://images.unsplash.com/photo-1669909910353-7bcf47c2139d?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><span><strong>Seasonal Vegetable Box</strong><small>Vegetables</small></span></a></td><td><strong>RM 4.50</strong></td><td>3 portions</td><td>2 days</td><td><span class="status fresh">Active</span></td><td>1</td><td><a href="./reservations.html">Requests</a></td></tr>
+      <tr><td><a class="product-cell" href="./rescue-item.html"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><span><strong>Artisan Bread Bundle</strong><small>Bakery</small></span></a></td><td><strong>RM 3.00</strong></td><td>2 portions</td><td>1 day</td><td><span class="status fresh">Active</span></td><td>2</td><td><a href="./reservations.html">Requests</a></td></tr>
+      <tr><td><a class="product-cell" href="./rescue-item.html"><img src="https://images.unsplash.com/photo-1714386893630-b7a148f77efd?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><span><strong>Organic Fruit Basket</strong><small>Fruit</small></span></a></td><td><strong>Free</strong></td><td>1 portion</td><td>3 days</td><td><span class="status fresh">Active</span></td><td>3</td><td><a href="./reservations.html">Requests</a></td></tr>
+      <tr><td><a class="product-cell" href="./rescue-item.html"><img src="https://images.unsplash.com/photo-1571212515416-fef01fc43637?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><span><strong>Dairy Essentials Pack</strong><small>Dairy</small></span></a></td><td><strong>RM 5.25</strong></td><td>4 portions</td><td>4 days</td><td><span class="status fresh">Active</span></td><td>1</td><td><a href="./reservations.html">Requests</a></td></tr>
+    </tbody></table></div>
+    <section class="workflow-panel retailer-listings">
+      <div class="section-heading"><div><h2>Retailer clearance status</h2><p>Keep marketplace stock separate from regular shelf inventory.</p></div><a href="./clearance.html">Manage clearance →</a></div>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Product</th><th>Quantity</th><th>Listing status</th><th>Clearance status</th><th>Expiry</th><th>Reservation</th></tr></thead><tbody>
+        <tr><td><span class="product-cell"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><span><strong>Dutch Lady Milk</strong><small>Batch DL-301126</small></span></span></td><td>4 cartons</td><td><span class="status fresh">Active</span></td><td><span class="status fresh">In Clearance Basket</span></td><td>30 Nov 2026</td><td>2 reserved · 2 available</td></tr>
+        <tr><td><span class="product-cell"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><span><strong>Gardenia Bread</strong><small>Batch GB-021126</small></span></span></td><td>6 loaves</td><td><span class="status fresh">Active</span></td><td><span class="status expiring-soon">Awaiting Transfer</span></td><td>2 Nov 2026</td><td>None</td></tr>
+      </tbody></table></div>
+    </section>
+  </div></main>
+</div>
+</body></html>

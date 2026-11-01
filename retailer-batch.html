@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-MY">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Retailer Batch · FreshSave</title><link rel="stylesheet" href="./css/style.css"></head>
+<body>
+<div id="app-shell">
+  <details class="site-sidebar" open><summary class="sidebar-toggle" aria-label="Toggle navigation"><span class="sidebar-menu-icon" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html"><span class="brand-mark">F</span><span>FreshSave<small>Waste less. Share more.</small></span></a><a href="./index.html">Dashboard</a><a href="./inventory.html" aria-current="page">My Inventory</a><a href="./scan.html">Scan Food</a><a href="./marketplace.html">Food Rescue</a><a href="./listings.html">My Listings</a><a href="./reservations.html">Reservations</a><a href="./impact.html">Impact</a><a href="./notifications.html">Notifications</a><a href="./profile.html">Profile</a></nav></details>
+  <main class="main"><div class="page">
+    <div class="page-title-row"><div><p class="eyebrow"><a href="./inventory.html">My Inventory</a> / Retailer batch</p><h1>Batch details</h1><p>Review physical stock before taking action on this batch.</p></div><a class="button button-soft" href="./inventory.html">← Back to inventory</a></div>
+    <section class="workflow-panel batch-detail-panel">
+      <div class="batch-summary"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Dutch Lady Full Cream Milk carton"><div><span class="eyebrow">Batch DL-301126 · Dairy</span><h2>Dutch Lady Full Cream Milk</h2><p>Barcode 9556001234567 · 12 cartons recorded</p><div class="batch-badges"><span class="status expiring-soon">Expiring Soon</span><span class="status urgent">Stock verification pending</span><span class="status fresh">Clearance eligible</span></div></div></div>
+      <div class="detail-meta batch-meta"><div><span>Batch expiry</span><strong>30 November 2026</strong></div><div><span>Date recorded</span><strong>15 October 2026</strong></div><div><span>Expiry countdown</span><strong>29 days remaining</strong></div><div><span>Reminder status</span><strong>Reminder set for 23 November</strong></div><div><span>Current stock status</span><strong>Physical count required</strong></div><div><span>Clearance status</span><strong>Not listed</strong></div></div>
+    </section>
+    <section class="workflow-panel physical-stock-panel">
+      <div class="section-heading"><div><h2>Check Physical Shelf Stock</h2><p>Count the remaining cartons on the shelf before choosing an action.</p></div></div>
+      <div class="workflow-content batch-action-state">
+        <input class="visually-hidden" type="checkbox" id="batch-mark-sold">
+        <input class="visually-hidden" type="checkbox" id="batch-stock-verified">
+        <div class="batch-status-view"><span class="batch-status-before"><span class="status expiring-soon">Verification Pending</span><p>12 cartons recorded · Confirm the stock currently on the shelf.</p></span><span class="batch-status-after"><span class="status fresh">Sold Out</span><p>Batch dismissed after physical stock verification.</p></span><span class="stock-verified-message"><span class="status fresh">Stock Verified</span><p>Physical shelf count confirmed. Choose an action for the remaining cartons.</p></span></div>
+        <label class="verification-toggle" for="batch-stock-verified"><span class="verify-pending">Confirm physical shelf stock is checked</span><span class="verify-complete">Physical stock verified</span></label>
+        <div class="batch-options">
+          <details class="decision-disclosure"><summary>Sold Out / Dismiss</summary><div class="decision-copy"><strong>Confirm the batch has sold through normal walk-in purchases.</strong><p>This removes the batch from clearance actions.</p><label class="button button-danger" for="batch-mark-sold">Confirm Sold Out / Dismiss</label></div></details>
+          <details class="decision-disclosure"><summary>List remaining stock</summary><div class="decision-copy"><p>Enter the verified quantity and pickup details for a FreshSave listing.</p>
+            <form class="form-grid batch-list-form"><div class="form-field"><label for="remaining-quantity">Remaining quantity</label><input id="remaining-quantity" type="number" min="1" value="4"></div><div class="form-field"><label for="batch-original-price">Original price (RM)</label><input id="batch-original-price" type="number" min="0" step=".01" value="6.50"></div><div class="form-field"><label for="batch-rescue-price">Discounted rescue price (RM)</label><input id="batch-rescue-price" type="number" min="0" step=".01" value="4.20"></div><div class="form-field"><label for="batch-expiry-date">Expiry date</label><input id="batch-expiry-date" type="date" value="2026-11-30"></div><div class="form-field full"><label for="batch-pickup-instructions">Pickup instructions</label><textarea id="batch-pickup-instructions">Collect at the cashier counter. Please ask for the FreshSave clearance basket.</textarea></div></form>
+            <input class="visually-hidden" type="checkbox" id="batch-list-confirmed"><label class="button" for="batch-list-confirmed">Confirm listing details</label><p class="publish-confirmation" role="status">Listing details confirmed. Continue to the clearance handoff screen.</p><a class="button clearance-continue" href="./clearance.html">Continue to clearance handoff</a>
+          </div></details>
+        </div>
+      </div>
+    </section>
+  </div></main>
+</div>
+</body></html>

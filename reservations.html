@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-MY">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Reservations · FreshSave</title><link rel="stylesheet" href="./css/style.css"></head>
+<body>
+<div id="app-shell">
+  <details class="site-sidebar" open><summary class="sidebar-toggle" aria-label="Toggle navigation"><span class="sidebar-menu-icon" aria-hidden="true">☰</span><span>Menu</span></summary><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html"><span class="brand-mark">F</span><span>FreshSave<small>Waste less. Share more.</small></span></a><a href="./index.html">Dashboard</a><a href="./inventory.html">My Inventory</a><a href="./scan.html">Scan Food</a><a href="./marketplace.html">Food Rescue</a><a href="./listings.html">My Listings</a><a href="./reservations.html" aria-current="page">Reservations</a><a href="./impact.html">Impact</a><a href="./notifications.html">Notifications</a><a href="./profile.html">Profile</a></nav></details>
+  <main class="main"><div class="page">
+    <div class="page-title-row"><div><p class="eyebrow">Pickup management</p><h1>Reservations</h1><p>Manage rescue requests and pickup statuses.</p></div></div>
+    <section class="section-panel"><div class="section-heading"><div><h2>Pending</h2><p>2 requests</p></div></div>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Product</th><th>Buyer / seller</th><th>Quantity</th><th>Reservation date</th><th>Pickup</th><th>Status</th><th>Actions</th></tr></thead><tbody>
+        <tr><td><span class="product-cell"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><span><strong>Artisan Bread Bundle</strong><small>Seller request</small></span></span></td><td>Sophie M.</td><td>2 bundles</td><td>26 May, 10:24</td><td>Tomorrow, 4–6 PM</td><td><span class="status expiring-soon">Pending</span></td><td><div class="row-actions"><button type="button">Accept</button><button type="button">Reject</button></div></td></tr>
+        <tr><td><span class="product-cell"><img src="https://images.unsplash.com/photo-1669909910353-7bcf47c2139d?auto=format&amp;fit=crop&amp;w=100&amp;q=80" alt=""><span><strong>Vegetable Box</strong><small>Buyer reservation</small></span></span></td><td>Green Corner</td><td>1 box</td><td>26 May, 09:10</td><td>Today, 5:30 PM</td><td><span class="status expiring-soon">Pending</span></td><td><div class="row-actions"><button type="button">Cancel</button></div></td></tr>
+      </tbody></table></div>
+    </section>
+    <section class="section-panel reservation-section"><div class="section-heading"><div><h2>Confirmed</h2><p>3 upcoming pickups</p></div></div><div class="empty-state"><strong>Next pickup: today at 5:30 PM</strong><p>Kuala Lumpur, Malaysia</p><button class="button" type="button">Mark collected</button></div></section>
+    <section class="workflow-panel reservation-detail">
+      <div class="section-heading"><div><h2>Pickup details</h2><p>Retailer reservation · Fresh Mart Bukit Bintang</p></div></div>
+      <div class="reservation-overview"><div class="reservation-product"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&amp;fit=crop&amp;w=160&amp;q=80" alt="Dutch Lady Full Cream Milk"><div><strong>Dutch Lady Full Cream Milk</strong><small>Batch DL-301126 · RM 4.20 per carton</small></div></div><div class="reservation-quantities"><div><span>Reserved quantity</span><strong>2 cartons</strong></div><div><span>Remaining available</span><strong>2 of 4 cartons</strong></div></div></div>
+      <div class="reservation-pickup"><div><span>Pickup location</span><strong>Fresh Mart Bukit Bintang, Kuala Lumpur</strong></div><div><span>Pickup window</span><strong>Today, 5:30–7:00 PM</strong></div><div><span>Pickup instructions</span><strong>Ask for the FreshSave clearance basket at the cashier.</strong></div></div>
+      <div class="reservation-state">
+        <input class="visually-hidden" type="radio" name="retailer-reservation-state" id="reservation-confirmed" checked><input class="visually-hidden" type="radio" name="retailer-reservation-state" id="reservation-collected">
+        <div class="reservation-status-readout"><span class="reservation-confirmed"><span class="status expiring-soon">Reservation confirmed</span><p>2 cartons set aside for buyer pickup.</p></span><span class="reservation-collected"><span class="status fresh">Collected</span><p>Collection complete · 2 cartons handed to buyer.</p></span></div>
+        <label class="button button-small reservation-mark-collected" for="reservation-collected">Mark collected</label><label class="status-action reservation-reset" for="reservation-confirmed">Reset to confirmed</label>
+      </div>
+    </section>
+    <section class="section-panel reservation-section"><div class="section-heading"><div><h2>Completed</h2><p>18 completed rescues</p></div></div><div class="empty-state"><p>Completed transactions are included in your sustainability impact.</p><a href="./impact.html">View impact →</a></div></section>
+    <section class="section-panel reservation-section"><div class="section-heading"><div><h2>Cancelled</h2><p>Recent activity</p></div></div><div class="empty-state"><p>No recent cancellations.</p></div></section>
+  </div></main>
+</div>
+</body></html>
